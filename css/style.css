@@ -1,0 +1,85 @@
+* {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+orden_cursos, body .cursos .curso_azafata, body .cursos .curso_electricista, body .cursos .curso_carpinteria, body .cursos .curso_programacion, body .cursos .curso_cocina {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-template-areas: "img lorem";
+  border-radius: 15px;
+  padding: 5px;
+}
+orden_cursos img, body .cursos .curso_azafata img, body .cursos .curso_electricista img, body .cursos .curso_carpinteria img, body .cursos .curso_programacion img, body .cursos .curso_cocina img {
+  grid-area: img;
+  height: 200px;
+  width: 100%;
+  padding: 3px;
+  border-radius: 15px;
+  background-color: black;
+}
+orden_cursos p, body .cursos .curso_azafata p, body .cursos .curso_electricista p, body .cursos .curso_carpinteria p, body .cursos .curso_programacion p, body .cursos .curso_cocina p {
+  grid-area: lorem;
+  align-self: center;
+  text-align: start;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "header" "main" "footer";
+  padding-inline: 20px;
+  background-color: rgb(153, 46, 153);
+}
+body header {
+  grid-area: header;
+  text-align: center;
+  padding-block: 15px;
+}
+body header h1 {
+  font-size: 3rem;
+}
+body .cursos {
+  grid-area: main;
+  display: grid;
+  gap: 10px 0px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "cocina" "programacion" "carpinteria" "electricista" "azafata";
+  padding-top: 10px;
+}
+body .cursos .curso_cocina {
+  grid-area: cocina;
+  background-color: rgba(138, 125, 125, 0.61);
+}
+body .cursos .curso_programacion {
+  grid-area: programacion;
+  grid-template-areas: "lorem img";
+  grid-template-columns: 3fr 1fr;
+  background-color: rgba(167, 150, 150, 0.61);
+}
+body .cursos .curso_carpinteria {
+  grid-area: carpinteria;
+  background-color: rgba(138, 125, 125, 0.61);
+}
+body .cursos .curso_electricista {
+  grid-area: electricista;
+  grid-template-areas: "lorem img";
+  grid-template-columns: 3fr 1fr;
+  background-color: rgba(167, 150, 150, 0.61);
+}
+body .cursos .curso_azafata {
+  grid-area: azafata;
+  background-color: rgba(138, 125, 125, 0.61);
+}
+body footer {
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=style.css.map */

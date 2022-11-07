@@ -1,0 +1,90 @@
+*{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+orden_cursos{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    display: grid;
+    grid-template-areas: "img lorem";
+    img{
+        grid-area: img;
+        height: 200px;
+        width: 100%;
+        padding: 3px;
+        border-radius: 15px;
+        background-color: black;
+    }
+    p{
+        grid-area: lorem;
+        align-self: center;
+        text-align: start;
+    }
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: "header""main""footer";
+    header{
+        grid-area: header;
+        text-align: center;
+        h1{
+            font-size: 3rem;
+        }
+        padding-block:15px;
+    }
+    .cursos{
+        grid-area: main;
+        display: grid;
+        gap:10px 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas: "cocina" "programacion" "carpinteria" "electricista" "azafata";
+        .curso_cocina{
+            grid-area: cocina;
+            @extend orden_cursos;
+            background-color: rgba(138, 125, 125, 0.61);
+        }
+        .curso_programacion{
+            grid-area: programacion;
+            @extend orden_cursos;
+            grid-template-areas: "lorem img";
+            grid-template-columns: 3fr 1fr;
+            background-color: rgba(167, 150, 150, 0.61);
+        }
+        .curso_carpinteria{
+            grid-area: carpinteria;
+            @extend orden_cursos;
+            background-color: rgba(138, 125, 125, 0.61);
+        }
+        .curso_electricista{
+            grid-area: electricista;
+            @extend orden_cursos;
+            grid-template-areas: "lorem img";
+            grid-template-columns: 3fr 1fr;
+            background-color: rgba(167, 150, 150, 0.61);
+        }
+        .curso_azafata{
+            grid-area: azafata;
+            @extend orden_cursos;
+            background-color: rgba(138, 125, 125, 0.61);
+        }
+        padding-top: 10px;
+    }
+    footer{
+        grid-area: footer;
+    }
+    padding-inline: 20px;
+    background-color: rgb(153, 46, 153);
+}
